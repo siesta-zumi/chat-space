@@ -22,34 +22,36 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## Userテーブル
+## Usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|name|string|null: false, unique: true, index: true|
 |email|string|null: false, unipue: true|
 |password|string|null: false|
 
 ### Association
 - has_many :users_groups
-- has_many :groups,through: users_groups
+- has_many :groups,through: :users_groups
 - has_many :messages
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null :false, unique: true|
-|chat_member|string|null: false|
-|user_id|integer|null :false, foregin_key: true|
+|name|string|null :false, unique: true|
+
 
 ### Association
 - has_many :users_groups
-- has_many :users,through: users_groups
+- has_many :users,through: :users_groups
 - has_many :messeges
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|string|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -58,8 +60,9 @@ Things you may want to cover:
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false,foregin_key: ture|
-|groups_id|integer|null: false,foregin_key: true|
+|users|reference|null: false,foreign_key: ture|
+|groups|reference|null: false,foreign_key: true|
+
 
 ### Association
 - belongs_to :user
