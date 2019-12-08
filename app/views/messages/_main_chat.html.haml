@@ -1,0 +1,45 @@
+.main-chat
+  .main-chat__header
+    .main-chat__header__group-info
+      group-info
+      .main-chat__header__group-info__member
+        Member : imaizumi
+    .main-chat__header__group-edit
+      = link_to "Edit","#",class: "main-chat__header__group-edit__btn"
+
+  .main-chat__message
+    .main-chat__message__info
+      .main-chat__message__info__user-name
+        imaizumi
+      .main-chat__message__info__date
+        1/1
+    .main-chat__message__text
+      こんにちは
+
+    .main-chat__message__info
+      .main-chat__message__info__user-name
+        imaizumi
+      .main-chat__message__info__date
+        6/30
+    .main-chat__message__text
+      おはよう
+
+    .main-chat__message__info
+      .main-chat__message__info__user-name
+        imaizumi
+      .main-chat__message__info__date
+        12/31
+    .main-chat__message__text
+      こんばんは
+
+  .main-chat__form
+    .main-chat__form__box
+      %input{type: "text",placeholder: "type a message",class: "main-chat__form__box__input-box"}
+      %label{class: "main-chat__form__box__image"}
+        = icon('fas','image')
+        %input{type:"file",class:"main-chat__form__box__image__file"}
+        
+        
+    %input{type: "submit",value: "Send",class: "main-chat__form__submit-btn"}
+    
+      
