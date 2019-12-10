@@ -2,35 +2,26 @@
   .main-chat__header
     .main-chat__header__group-info
       group-info
-      .main-chat__header__group-info__member
+      .main-chat__header__group-info__member 
         Member : imaizumi
     .main-chat__header__group-edit
       = link_to "Edit","#",class: "main-chat__header__group-edit__btn"
 
   .main-chat__message
-    .main-chat__message__info
-      .main-chat__message__info__user-name
-        imaizumi
-      .main-chat__message__info__date
-        1/1
-    .main-chat__message__text
-      こんにちは
+    %ul.main-chat__message__info
+      %li.main-chat__message__info__user-name imaizumi
+      %li.main-chat__message__info__date 1/1
+    %p.main-chat__message__text こんにちは
+    
+    %ul.main-chat__message__info
+      %li.main-chat__message__info__user-name imaizumi
+      %li.main-chat__message__info__date 6/30
+    %p.main-chat__message__text おはようございます
 
-    .main-chat__message__info
-      .main-chat__message__info__user-name
-        imaizumi
-      .main-chat__message__info__date
-        6/30
-    .main-chat__message__text
-      おはよう
-
-    .main-chat__message__info
-      .main-chat__message__info__user-name
-        imaizumi
-      .main-chat__message__info__date
-        12/31
-    .main-chat__message__text
-      こんばんは
+    %ul.main-chat__message__info
+      %li.main-chat__message__info__user-name imaizumi
+      %li.main-chat__message__info__date 12/31
+    %p.main-chat__message__text こんばんは
 
   .main-chat__form
     .main-chat__form__box
