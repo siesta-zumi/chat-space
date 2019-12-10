@@ -1,0 +1,26 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__user
+      .side-bar__header__user__name
+        imaizumi
+      =link_to"#",class: "side-bar__header__user__item side-bar__header__user__item__edit" do
+        = icon('fas', 'edit')
+        
+      =link_to"#",class: "side-bar__header__user__item side-bar__header__user__item__icon" do
+        = icon('fas', 'cog')
+    
+  .side-bar__groups
+    %ul.side-bar__groups__group
+      %li.side-bar__groups__group__name Group A
+      %li.side-bar__groups__group__comment まだメッセージがありません
+
+    %ul.side-bar__groups__group
+      %li.side-bar__groups__group__name Group B
+      %li.side-bar__groups__group__comment まだメッセージがありません
+      
+    %ul.side-bar__groups__group
+      %li.side-bar__groups__group__name Group C
+      %li.side-bar__groups__group__comment まだメッセージがありません
+        
+    
+ 
