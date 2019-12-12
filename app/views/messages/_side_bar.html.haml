@@ -1,13 +1,13 @@
 .side-bar
   .side-bar__header
     .side-bar__header__user
-      .side-bar__header__user__name
-        imaizumi
+      %h3.side-bar__header__user__name
+        = current_user.name
       =link_to"#",class: "side-bar__header__user__item side-bar__header__user__item__edit" do
         = icon('fas', 'edit')
         
-      =link_to"#",class: "side-bar__header__user__item side-bar__header__user__item__icon" do
-        = icon('fas', 'cog')
+      = link_to edit_user_path(current_user),class: "side-bar__header__user__item side-bar__header__user__item__edit" do
+        = icon('fas', 'cog', class: 'icon')
     
   .side-bar__groups
     %ul.side-bar__groups__group
