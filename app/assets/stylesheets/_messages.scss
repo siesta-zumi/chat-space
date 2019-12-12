@@ -2,21 +2,16 @@
   box-sizing: border-box;
 }
 
-//＊＊＊＊＊共通色の定義＊＊＊＊＊
-$white:#ffffff;
-$light_blue:#38aef0;
-
-
 //＊＊＊＊＊サイドバー の編集＊＊＊＊＊
 .side-bar{
-  background-color: #2f3e51;
+  background-color: $side_blue_light;
   color: $white;
   width: 300px;
   height: 100vh;
   float:left;
 
   &__header{
-    background-color: #253142;
+    background-color: $side_blue_dark;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -52,7 +47,7 @@ $light_blue:#38aef0;
   }
 
   &__groups{
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
     display: block;
     padding:20px 20px 0 20px;
