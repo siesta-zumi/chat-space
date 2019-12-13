@@ -3,7 +3,7 @@
     .side-bar__header__user
       %h3.side-bar__header__user__name
         = current_user.name
-      =link_to"#",class: "side-bar__header__user__item side-bar__header__user__item__edit" do
+      =link_to new_group_path,class: "side-bar__header__user__item side-bar__header__user__item__edit" do
         = icon('fas', 'edit')
         
       = link_to edit_user_path(current_user),class: "side-bar__header__user__item side-bar__header__user__item__edit" do
