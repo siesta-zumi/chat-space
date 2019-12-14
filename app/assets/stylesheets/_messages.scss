@@ -54,16 +54,20 @@
     color: $white;
     font-weight: bold;
     
-    &__group{
+    .group{
       margin-bottom: 40px;
-
+      
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
+        text-decoration: none;
       }
 
-      &__comment{
+      &__message{
         font-size: 11px;
+        color: $white;
+        text-decoration: none;
       }
     }
   }
