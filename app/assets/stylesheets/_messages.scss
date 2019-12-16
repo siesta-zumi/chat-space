@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+a:link{
+  color: white;
+  text-decoration: none;
+}
+
 
 //＊＊＊＊＊サイドバー の編集＊＊＊＊＊
 .side-bar{
@@ -9,44 +14,38 @@
   width: 300px;
   height: 100vh;
   float:left;
-
-  &__header{
+  
+  .header{
     background-color: $side_blue_dark;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     
-    &__user{
+    &__user-name{
       background-color:#333333;
       height: 20px;
       width: 260px;
       font-size: 16px;
       font-weight: bold;
-      margin: 0 auto;
+      margin: 0 20px;
       display: flex;
       align-items: center;
-
-      &__name{
-        justify-content: left;
-        text-align: left;
-        width: calc(100vw - 60px);
-      }
-      &__item{ 
-        color: $white;
-        justify-content: right;
-        width: 60px;
-
-        &__edit{
-          margin-right: 5px;
-        }
-        
-      }
     }
+    &__lists{
+      justify-content: left;
+      text-align: left;
+      width: calc(100vw - 60px);
+      color: $white;
+      justify-content: right;
+      width: 60px;
+      margin-right: 5px;
+    
+    }  
     
   }
 
-  &__groups{
+  .groups{
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     display: block;
@@ -74,13 +73,11 @@
 }
 
 //＊＊＊＊＊メインの編集＊＊＊＊＊
-.main-chat{
+.chat{
   background-color:$white;
   width: calc(100vw - 300px);
   float:left;
-  
-
-  &__header{
+  .header{
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -88,7 +85,7 @@
     color: #333333;
     padding: 0px 40px;
 
-    &__group-info{
+    &__group{
       font-size: 20px;
       padding-top: 35px;
       justify-content: left;
@@ -115,7 +112,7 @@
   }
 
 
-  &__message{
+  .message{
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px 0 40px;
@@ -145,7 +142,7 @@
     }
   
   }
-  &__form{
+  .form{
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
