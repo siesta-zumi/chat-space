@@ -3,10 +3,11 @@
     .header__group
       group-info
       .header__group__member 
-        Member : imaizumi
+        Member : 
+        =current_user.name
     .header__group-edit
-      = link_to "Edit","#",class: "main-chat__header__group-edit__btn"
-
+      = link_to "#" do
+        Edit
   .message
     %ul.message__info
       %li.message__info__user-name imaizumi
