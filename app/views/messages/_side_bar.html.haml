@@ -1,15 +1,14 @@
 .side-bar
-  .side-bar__header
-    .side-bar__header__user
-      %h3.side-bar__header__user__name
-        = current_user.name
+  .header
+    .header__user-name
+      = current_user.name
+    .header__lists
       =link_to new_group_path do
         = icon('fas', 'edit')
-        
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog', class: 'icon')
     
-  .side-bar__groups
+  .groups
     - current_user.groups.each do |group|
       .group
         = link_to group_messages_path(group) do
@@ -17,4 +16,4 @@
             = group.name
           .group__message
             メッセージはまだありません。
-    
+      
