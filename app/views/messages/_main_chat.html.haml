@@ -1,36 +1,38 @@
-.main-chat
-  .main-chat__header
-    .main-chat__header__group-info
+.chat
+  .header
+    .header__group
       group-info
-      .main-chat__header__group-info__member 
-        Member : imaizumi
-    .main-chat__header__group-edit
-      = link_to "Edit","#",class: "main-chat__header__group-edit__btn"
+      .header__group__member 
+        Member : 
+        =current_user.name
+    .header__group-edit
+      = link_to "#",class:"btn" do
+        Edit
 
-  .main-chat__message
-    %ul.main-chat__message__info
-      %li.main-chat__message__info__user-name imaizumi
-      %li.main-chat__message__info__date 1/1
-    %p.main-chat__message__text こんにちは
+  .message
+    %ul.message__info
+      %li.message__info__user imaizumi
+      %li.message__info__date 1/1
+    %p.message__text こんにちは
     
-    %ul.main-chat__message__info
-      %li.main-chat__message__info__user-name imaizumi
-      %li.main-chat__message__info__date 6/30
-    %p.main-chat__message__text おはようございます
+    %ul.message__info
+      %li.message__info__user imaizumi
+      %li.message__info__date 6/30
+    %p.message__text おはようございます
 
-    %ul.main-chat__message__info
-      %li.main-chat__message__info__user-name imaizumi
-      %li.main-chat__message__info__date 12/31
-    %p.main-chat__message__text こんばんは
+    %ul.message__info
+      %li.message__info__user imaizumi
+      %li.message__info__date 12/31
+    %p.message__text こんばんは
 
-  .main-chat__form
-    .main-chat__form__box
-      %input{type: "text",placeholder: "type a message",class: "main-chat__form__box__input-box"}
-      %label{class: "main-chat__form__box__image"}
+  .form
+    .form__box
+      %input{type: "text",placeholder: "type a message",class: "form__box__input-box"}
+      %label{class: "form__box__image"}
         = icon('fas','image')
-        %input{type:"file",class:"main-chat__form__box__image__file"}
+        %input{type:"file",class:"form__box__image__file"}
         
         
-    %input{type: "submit",value: "Send",class: "main-chat__form__submit-btn"}
+    %input{type: "submit",value: "Send",class: "form__submit-btn"}
     
       
