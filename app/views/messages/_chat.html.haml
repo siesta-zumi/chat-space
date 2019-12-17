@@ -1,37 +1,27 @@
 .chat
   .header
     .header__group
-      group-info
+      group
       .header__group__member 
         Member : 
         =current_user.name
     .header__group-edit
       = link_to "#" do
         Edit
+
   .message
-    %ul.message__info
-      %li.message__info__user-name imaizumi
-      %li.message__info__date 1/1
-    %p.message__text こんにちは
-    
-    %ul.message__info
-      %li.message__info__user-name imaizumi
-      %li.message__info__date 6/30
-    %p.message__text おはようございます
-
-    %ul.message__info
-      %li.message__info__user-name imaizumi
-      %li.message__info__date 12/31
-    %p.message__text こんばんは
-
-  .form
-    .form__box
-      %input{type: "text",placeholder: "type a message",class: "form__box__input-box"}
-      %label{class: "form__box__image"}
-        = icon('fas','image')
-        %input{type:"file",class:"form__box__image__file"}
+    .message__info
+      .message__info__user-name ima
         
+      .message__info__date 1/1
         
-    %input{type: "submit",value: "Send",class: "form__submit-btn"}
-    
-      
+    .message__text こんにちは
+
+  .footer
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "footer__text", placeholder: ' type a message'
+      .footer__form__mask
+        = f.label :image, class: 'footer__form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'footer__send-button'
