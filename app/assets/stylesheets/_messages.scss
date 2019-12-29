@@ -112,13 +112,13 @@ a:link{
   }
 
   .messages{
-    background-color: #fafafa;
+    background-color: $white;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
   }
 
   .message{
-    background-color: #fafafa;
+    background-color: $white;
     padding: 35px 40px 0 40px;
     
     
