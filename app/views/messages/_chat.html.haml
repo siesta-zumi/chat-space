@@ -5,7 +5,9 @@
       = @group.name
       .header__group__member 
         Member : 
-        =current_user.name
+        -@group.users.each do |user|
+          = user.name
+
     .header__group-edit
       = link_to edit_group_path(@group[:id]) do
         Edit
